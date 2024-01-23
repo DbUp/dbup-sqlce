@@ -1,7 +1,7 @@
 ﻿#if !NETCORE
 using DbUp.Tests.Common;
 
-namespace DbUp.Tests.Providers.SqlCe;
+namespace DbUp.SqlCe.Tests;
 
 public class NoPublicApiChanges : NoPublicApiChangesBase
 {

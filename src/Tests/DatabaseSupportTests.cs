@@ -1,9 +1,8 @@
 ﻿#if !NETCORE
 using DbUp.Builder;
-using DbUp.SqlCe;
 using DbUp.Tests.Common;
 
-namespace DbUp.Tests.Providers.SqlCe;
+namespace DbUp.SqlCe.Tests;
 
 public class DatabaseSupportTests : DatabaseSupportTestsBase
 {
