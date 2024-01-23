@@ -1,25 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Description>DbUp makes it easy to deploy and upgrade SQL Server databases. This package adds Amazon NewProvider support.</Description>
-    <Title>DbUp NewProvider Support</Title>
-    <TargetFrameworks>netstandard1.3;netstandard2.0;net35;net45</TargetFrameworks>
-    <AssemblyName>dbup-newprovider</AssemblyName>
-    <RootNamespace>DbUp.NewProvider</RootNamespace>
+    <Description>DbUp makes it easy to deploy and upgrade SQL Server databases. This package adds SQL CE Support.</Description>
+    <Title>DbUp SQL CE Support</Title>
+    <TargetFrameworks>net462</TargetFrameworks>
+    <RootNamespace>DbUp.SqlCe</RootNamespace>
     <AssemblyOriginatorKeyFile>../dbup.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
-    <RepositoryUrl>https://github.com/DbUp/dbup-newprovider.git</RepositoryUrl>
-    <Product>dbup_newprovider</Product>
-    <PackageId>dbup-newprovider</PackageId>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+    <RepositoryUrl>https://github.com/DbUp/dbup-sqlce.git</RepositoryUrl>
+    <Product>dbup_sqlce</Product>
+    <PackageId>dbup-sqlce</PackageId>
     <PackageIcon>dbup-icon.png</PackageIcon>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net35'">
-    <DefineConstants>$(DefineConstants);NPGSQLv2</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="dbup-core" Version="4.5.0" />
+    <PackageReference Include="Microsoft.SqlServer.Compact" Version="4.0.8876.1" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net35'">
